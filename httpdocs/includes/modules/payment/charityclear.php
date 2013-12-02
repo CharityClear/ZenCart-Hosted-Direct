@@ -370,7 +370,7 @@ class charityclear
     {
         global $db;
         if (!isset($this->_check)) {
-            $check_query = $db->Execute("select configuration_value from " . TABLE_CONFIGURATION . " where configuration_key = '".MODULE_PAYMENT_CHARITYCLEAR_STATUS."'");
+            $check_query = $db->Execute("select configuration_value from " . TABLE_CONFIGURATION . " where configuration_key = 'MODULE_PAYMENT_CHARITYCLEAR_STATUS'");
             $this->_check = $check_query->RecordCount();
         }
         return $this->_check;
